@@ -1,0 +1,33 @@
+<!-- search box-->
+<div class="container ">
+<form>
+  <div class="form-group">
+   
+    <input type="text" class="form-control" placeholder="Search Books..." ng-model="searchStr">
+  </div>
+</form><br/><br/><br/>
+<!--BOOK SECTION-->
+<section class="boundary">
+  
+   <div ng-repeat="book in books | filter:searchStr">
+       <div class="media-left">
+	     <img ng-src={{book.imageUrl}} style="width:140px">
+		
+	  
+	   </div>
+	  <div class="media-body" >
+	  
+	     <ul class="list-unstyled look" >
+		 
+	    <h1>{{ book.name }}</h1>
+		<li><strong>Price:</strong>{{ book.price | currency:'Rs.'}}</li>
+		<li><strong>Rating:</strong>{{book.rating}}</li><br/>
+		<li><strong>Details:</strong>{{book.details}}</li>
+		
+	  </ul><br/><br/><br/>
+	  <button class="btn btn-danger pull-right" ng-click="addToKart(book)">Add to Kart</button>
+	  </div><hr><br/></div>
+	  
+
+</section>
+</div>

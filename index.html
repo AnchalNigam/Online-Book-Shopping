@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Welcome to BookBazar</title>
+ 
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <link rel="stylesheet" href="app.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+<script type="text/javascript" src="first.js"></script>
+ 
+ 
+</head>
+<body ng-app="myHeader">
+
+<!--header section-->
+<div class="container-fluid" ng-controller="myHeaderCtrl" >
+   <div class="row">
+     <div class="col-md-5">
+	    <span class="logo">{{appDetails.title}}</span><p class="tagline">{{appDetails.tagline }}</p>
+	 </div>
+	 
+   </div>
+</div>
+
+<!--jumbotron-->
+<div class="jumbotron myjumbo">
+</div>
+<!--menu-->
+<div class="container">
+<div ng-controller="myHeaderCtrl" >
+  <div class="row">
+   <div class="col-xs-11">
+  <div class="col-sm-7 col-sm-offset-5 col-xs-8 col-xs-offset-3">
+   <ul class="nav nav-pills navbar-brand center-pills">
+		    <li ><a href="#/books">Books</a></li>
+			<li><a href="#/karts">Kart</a></li>
+   </ul>
+  </div>
+  </div>
+  </div>
+</div></div><br/><br/><br/>
+<div ng-view=""></div>
+<h6>bbjsdm</h6>
+</body>
+</html>

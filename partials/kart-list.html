@@ -1,0 +1,29 @@
+<div class="container ">
+
+<!--BOOK SECTION-->
+<section>
+  
+   <div ng-repeat="book in kart">
+    <div class="media-left">
+	     <img ng-src={{book.imageUrl}} style="width:140px">
+		
+	  
+	  </div>
+	  <div class="media-body" >
+	  
+	     <ul class="list-unstyled look" >
+		 
+	    <h1>{{book.name }}</h1>
+		
+		<li><strong>Price:</strong>{{book.price | currency:'Rs.'}}</li>
+		<li><strong>Rating:</strong>{{book.rating}}</li><br/>
+		
+		<li><strong>Details:</strong>{{book.details}}</li>
+		
+	  </ul><br/><br/><br/>
+	  <button class="btn btn-danger pull-right" ng-click="buy(book)">Buy</button>
+	  </div><hr><br/></div>
+	  
+
+</section>
+</div>
