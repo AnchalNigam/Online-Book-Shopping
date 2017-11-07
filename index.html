@@ -3,12 +3,13 @@
 <head>
  <title>Welcome to BookBazar</title>
  
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
- <link rel="stylesheet" href="app.css">
- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
-<script type="text/javascript" src="first.js"></script>
- 
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	 <link rel="stylesheet" href="app.css">
+	 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+	<script type="text/javascript" src="first.js"></script>
+	 <script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
  
 </head>
 <body ng-app="myHeader">
@@ -26,21 +27,69 @@
 <!--jumbotron-->
 <div class="jumbotron myjumbo">
 </div>
-<!--menu-->
+<!--carousel-->
+<div id="myCarousel" class="carousel slide hidden-md hidden-sm hidden-xs" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+	  <li data-target="#myCarousel" data-slide-to="2"></li>
+	 
+     
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+
+      <div class="item active">
+	  <div class="carousel-caption">
+         
+        </div>
+        <img class="img responsive" src="book1.jpg" alt="Book" style="height:600px;width:100%">   
+        
+      </div>
+
+      <div class="item">
+	   <div class="carousel-caption">
+          
+        </div>
+        <img class="img responsive"  src="book2.jpg" alt="Book" style="height:600px;width:100%">
+       
+      </div>
+    <div class="item">
+	   <div class="carousel-caption">
+          
+        </div>
+        <img class="img responsive"  src="book3.jpg" alt="Book" style="height:600px;width:100%">
+       
+      </div>
+   </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+<!--menu--><br/><br/>
 <div class="container">
 <div ng-controller="myHeaderCtrl" >
   <div class="row">
-   <div class="col-xs-11">
-  <div class="col-sm-7 col-sm-offset-5 col-xs-8 col-xs-offset-3">
+
+  <div class="col-lg-6 col-lg-offset-5 col-xs-7 col-xs-offset-4 col-md-3 col-md-offset-5 col-sm-5 col-sm-offset-5">
    <ul class="nav nav-pills navbar-brand center-pills">
 		    <li ><a href="#/books">Books</a></li>
 			<li><a href="#/karts">Kart</a></li>
    </ul>
   </div>
-  </div>
+
   </div>
 </div></div><br/><br/><br/>
 <div ng-view=""></div>
-<h6>bbjsdm</h6>
+<h6>sggsg</h6>
 </body>
 </html>

@@ -2,7 +2,7 @@
 
 <!--BOOK SECTION-->
 <section>
-  
+
    <div ng-repeat="book in kart">
     <div class="media-left">
 	     <img ng-src={{book.imageUrl}} style="width:140px">
@@ -26,4 +26,14 @@
 	  
 
 </section>
+<div ng-hide="kart.length > 0">
+	<div class="container">
+	   <div class="row">
+	      <div class="col-md-10 col-md-offset-1 col-xs-7 col-xs-offset-3">
+	          <img src="shop.png" class="img-responsive center-block">
+			
+	       </div> 
+	   </div>
+	</div>
+</div>
 </div>
